@@ -7,7 +7,15 @@ const cors = require('cors');
 
 const app = express();
 app.use(cors());
+
+
+//parser
+app.use(express.json());
 dbConnection();
+
+
+app.use('/api/usuarios', require('./routes/usuarios'));
+app.use('/api/login', require('./routes/auth'));
 
 app.get('/',(req,res)=>{
     res.json({
