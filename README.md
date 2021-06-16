@@ -1,0 +1,5 @@
+#AdminPro
+
+```
+npm install
+```
